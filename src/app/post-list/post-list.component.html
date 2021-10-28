@@ -1,13 +1,13 @@
 
 <div>
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between" [ngStyle]="{bg: 'postLikeIts'}">
     <h2>{{ postTitle }}</h2>
     <p>date</p>
   </div>
     <p>{{ postContent}}</p>
   <div>
     <button class="btn btn-success" (click)="onLike()">Love it!</button>
-    <button class="btn btn-danger">Don't love it!</button>
+    <button class="btn btn-danger ms-3" (click)="onDislike()">Don't love it!</button>
   </div>
 </div>
 

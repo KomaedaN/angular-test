@@ -15,7 +15,7 @@ export class PostListComponent implements OnInit {
   }
 
   @Input() postTitle: string;
-  @Input() postContent: string ;
+  @Input() postContent: string;
   @Input() postLoveIts: number;
 
   
@@ -23,7 +23,20 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
   }
   onLike(){
-    console.log("yes");
+    this.postLoveIts = 1;
+    console.log(this.postLoveIts);
   }
-
+  onDislike(){
+    this.postLoveIts = -1;
+    console.log(this.postLoveIts);
+  }
+  switch (postLoveIts) {
+    case 1:
+      return 'green';
+      break;
+  
+    case -1:
+      return 'red';
+      break;
+  }
 }
